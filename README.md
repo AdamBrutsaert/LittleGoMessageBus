@@ -6,3 +6,5 @@ This is a currently in development reimplementation of my [LittleCppMessageBus](
 
 * Extract in its own package
 * Implement a queue of messages
+* Add priority to handlers
+    * Execute concurrently handlers of the same priority
