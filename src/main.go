@@ -7,13 +7,10 @@ import (
 )
 
 func main() {
-	// Create a handler for a certain type
-	var fn bus.Function[int] = func(value int) {
-		fmt.Println("Value is:", value)
-	}
-
 	// Subscribe to a type
-	bus.Subscribe[int](fn)
+	bus.Subscribe(func(value int) {
+		fmt.Println("Value is:", value)
+	})
 
 	// Send messages
 	bus.Send("") // No function handles it
